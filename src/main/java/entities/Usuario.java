@@ -5,13 +5,15 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter @Setter @NoArgsConstructor
 @Entity
 @Table(name = "usuarios")
 public class Usuario implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -43,20 +45,9 @@ public class Usuario implements Serializable {
 		ROLE_ADMIN, ROLE_CLIENTE
 	}
 
-	public Usuario() {
-
-	}
-
-	public Usuario(Long id, String username, String password, Role role, LocalDateTime dataCriacao,
-			LocalDateTime dataModificacao, String criadoPor, String modificadoPor) {
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.role = role;
-		this.dataCriacao = dataCriacao;
-		this.dataModificacao = dataModificacao;
-		this.criadoPor = criadoPor;
-		this.modificadoPor = modificadoPor;
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + "]";
 	}
 
 	@Override
@@ -76,76 +67,6 @@ public class Usuario implements Serializable {
 		return Objects.equals(id, other.id);
 	}
 
-	@Override
-	public String toString() {
-		return "Usuario [id=" + id + "]";
-	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public Role getRole() {
-		return role;
-	}
-
-	public void setRole(Role role) {
-		this.role = role;
-	}
-
-	public LocalDateTime getDataCriacao() {
-		return dataCriacao;
-	}
-
-	public void setDataCriacao(LocalDateTime dataCriacao) {
-		this.dataCriacao = dataCriacao;
-	}
-
-	public LocalDateTime getDataModificacao() {
-		return dataModificacao;
-	}
-
-	public void setDataModificacao(LocalDateTime dataModificacao) {
-		this.dataModificacao = dataModificacao;
-	}
-
-	public String getCriadoPor() {
-		return criadoPor;
-	}
-
-	public void setCriadoPor(String criadoPor) {
-		this.criadoPor = criadoPor;
-	}
-
-	public String getModificadoPor() {
-		return modificadoPor;
-	}
-
-	public void setModificadoPor(String modificadoPor) {
-		this.modificadoPor = modificadoPor;
-	}
-
-	
-	
 	
 }
