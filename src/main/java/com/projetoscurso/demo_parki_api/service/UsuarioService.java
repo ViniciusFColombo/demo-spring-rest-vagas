@@ -1,11 +1,11 @@
-package service;
+package com.projetoscurso.demo_parki_api.service;
 
-import entities.Usuario;
+import com.projetoscurso.demo_parki_api.entities.Usuario;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import repository.UsuarioRepository;
+import com.projetoscurso.demo_parki_api.repository.UsuarioRepository;
 
 @RequiredArgsConstructor
 @Service

@@ -1,4 +1,4 @@
-package config;
+package com.projetoscurso.demo_parki_api.config;
 
 import java.util.TimeZone;
 

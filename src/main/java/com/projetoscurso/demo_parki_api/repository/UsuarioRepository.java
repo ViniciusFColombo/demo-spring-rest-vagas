@@ -1,8 +1,8 @@
-package repository;
+package com.projetoscurso.demo_parki_api.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import entities.Usuario;
+import com.projetoscurso.demo_parki_api.entities.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 

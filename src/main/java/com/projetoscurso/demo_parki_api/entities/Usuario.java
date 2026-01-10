@@ -1,4 +1,4 @@
-package entities;
+package com.projetoscurso.demo_parki_api.entities;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
