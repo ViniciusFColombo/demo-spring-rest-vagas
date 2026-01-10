@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import com.projetoscurso.demo_parki_api.service.UsuarioService;
 
+import java.util.List;
+
 
 @RequiredArgsConstructor
 @RestController
@@ -32,5 +34,11 @@ public class UsuarioController {
     public ResponseEntity<Usuario> updatePassword(@PathVariable Long id, @RequestBody Usuario usuario) {
         Usuario user = usuarioService.editarSenha(id, usuario.getPassword());
         return ResponseEntity.ok(user);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Usuario>> getAll(){
+        List<Usuario> users = usuarioService.buscarTodos();
+        return ResponseEntity.ok(users);
     }
 }
