@@ -27,4 +27,10 @@ public class UsuarioController {
         Usuario user = usuarioService.buscarPorId(id);
         return ResponseEntity.ok(user);
     }
+
+    @PatchMapping("/{id}") // Patch para alterar algo parcial do usuario. PUT alterar tudo
+    public ResponseEntity<Usuario> updatePassword(@PathVariable Long id, @RequestBody Usuario usuario) {
+        Usuario user = usuarioService.editarSenha(id, usuario.getPassword());
+        return ResponseEntity.ok(user);
+    }
 }

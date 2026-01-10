@@ -13,7 +13,7 @@ public class UsuarioService {
 	private final UsuarioRepository usuarioRepository;
 
 	@Transactional
-	public Usuario salvar (Usuario usuario) {
+	public Usuario salvar(Usuario usuario) {
 		return usuarioRepository.save(usuario);
 	}
 
@@ -22,5 +22,12 @@ public class UsuarioService {
 		return usuarioRepository.findById(id).orElseThrow(
 				() -> new RuntimeException("Usuário não encontrado.")
 		);
+	}
+
+	@Transactional
+	public Usuario editarSenha(Long id, String password) {
+		Usuario user = buscarPorId(id);
+		user.setPassword(password);
+		return user;
 	}
 }
