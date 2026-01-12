@@ -1,4 +1,4 @@
-package com.projetoscurso.demo_parki_api.entities;
+package com.projetoscurso.demo_parki_api.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -27,7 +27,7 @@ public class Usuario implements Serializable {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "role", nullable = false, length = 25)
-	private Role role;
+	private Role role = Role.ROLE_CLIENTE;
 	
 	@Column(name = "data_ciracao")
 	private LocalDateTime dataCriacao;
