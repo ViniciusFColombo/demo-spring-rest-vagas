@@ -2,6 +2,7 @@ com\projetoscurso\demo_parki_api\web\dto\UsuarioCreateDto.class
 com\projetoscurso\demo_parki_api\web\dto\mapper\UsuarioMapper$1.class
 com\projetoscurso\demo_parki_api\entity\Usuario.class
 com\projetoscurso\demo_parki_api\web\dto\mapper\UsuarioMapper.class
+com\projetoscurso\demo_parki_api\web\dto\UsuarioSenhaDto.class
 com\projetoscurso\demo_parki_api\web\controller\UsuarioController.class
 com\projetoscurso\demo_parki_api\web\dto\UsuarioResponseDto.class
 com\projetoscurso\demo_parki_api\entity\Usuario$Role.class

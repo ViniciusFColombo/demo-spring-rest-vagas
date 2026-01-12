@@ -3,6 +3,7 @@ package com.projetoscurso.demo_parki_api.web.controller;
 import com.projetoscurso.demo_parki_api.entity.Usuario;
 import com.projetoscurso.demo_parki_api.web.dto.UsuarioCreateDto;
 import com.projetoscurso.demo_parki_api.web.dto.UsuarioResponseDto;
+import com.projetoscurso.demo_parki_api.web.dto.UsuarioSenhaDto;
 import com.projetoscurso.demo_parki_api.web.dto.mapper.UsuarioMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -34,9 +35,9 @@ public class UsuarioController {
     }
 
     @PatchMapping("/{id}") // Patch para alterar algo parcial do usuario. PUT alterar tudo
-    public ResponseEntity<Usuario> updatePassword(@PathVariable Long id, @RequestBody Usuario usuario) {
-        Usuario user = usuarioService.editarSenha(id, usuario.getPassword());
-        return ResponseEntity.ok(user);
+    public ResponseEntity<Void> updatePassword(@PathVariable Long id, @RequestBody UsuarioSenhaDto dto) {
+        Usuario user = usuarioService.editarSenha(id, dto.getSenhaAtual(), dto.getNovaSenha(), dto.getConfirmaSenha());
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping
