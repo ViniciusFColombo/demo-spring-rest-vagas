@@ -2,6 +2,7 @@ com\projetoscurso\demo_parki_api\exception\UsernameUniqueViolationException.clas
 com\projetoscurso\demo_parki_api\web\exception\ErrorMessage.class
 com\projetoscurso\demo_parki_api\exception\EntityNotFoundException.class
 com\projetoscurso\demo_parki_api\web\dto\UsuarioCreateDto.class
+com\projetoscurso\demo_parki_api\exception\PasswordInvalidException.class
 com\projetoscurso\demo_parki_api\web\exception\ApiExceptionHandler.class
 com\projetoscurso\demo_parki_api\web\dto\mapper\UsuarioMapper$1.class
 com\projetoscurso\demo_parki_api\entity\Usuario.class
