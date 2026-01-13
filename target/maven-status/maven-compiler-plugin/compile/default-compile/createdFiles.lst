@@ -1,3 +1,4 @@
+com\projetoscurso\demo_parki_api\exception\UsernameUniqueViolationException.class
 com\projetoscurso\demo_parki_api\web\exception\ErrorMessage.class
 com\projetoscurso\demo_parki_api\web\dto\UsuarioCreateDto.class
 com\projetoscurso\demo_parki_api\web\exception\ApiExceptionHandler.class
