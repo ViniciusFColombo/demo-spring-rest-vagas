@@ -1,6 +1,7 @@
 package com.projetoscurso.demo_parki_api.service;
 
 import com.projetoscurso.demo_parki_api.entity.Usuario;
+import com.projetoscurso.demo_parki_api.exception.EntityNotFoundException;
 import com.projetoscurso.demo_parki_api.exception.UsernameUniqueViolationException;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
@@ -28,7 +29,7 @@ public class UsuarioService {
 	@Transactional(readOnly = true)
 	public Usuario buscarPorId(Long id) {
 		return usuarioRepository.findById(id).orElseThrow(
-				() -> new RuntimeException("Usuário não encontrado.")
+				() -> new EntityNotFoundException(String.format("Usuário id=%s não encontrado", id))
 		);
 	}
 
